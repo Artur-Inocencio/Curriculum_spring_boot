@@ -5,6 +5,6 @@ RUN mvn clean package -X -DskipTests
 
 FROM openjdk:21-jdk
 WORKDIR /app
-COPY --from=build ./app/target/.jar ./Curriculum-Repository*.jar
+COPY --from=build ./app/target/.jar ./Curriculum-Repository-Java*.jar
 EXPOSE 8080
-ENTRYPOINT java -jar Curriculum-Repository*.jar
+ENTRYPOINT java -jar Curriculum-Repository-Java*.jar
